@@ -59,36 +59,40 @@ void draw_text_scaled(uint16_t x, uint16_t y, const char *text, uint16_t color, 
     }
 }
 
+#define IMAGE_WIDTH 135
+#define IMAGE_HEIGHT 240
+#define IMAGE_FILE "/spiffs/image.bin"
+#define IMAGEFILE_2 "/spiffs/image2.bin"
+
+
+void load_image(const char* path) {
+    FILE* file = fopen(path, "rb");
+    uint16_t* img_buf = malloc(IMAGE_WIDTH * IMAGE_HEIGHT * 2);
+    
+    fread(img_buf, 2, IMAGE_WIDTH * IMAGE_HEIGHT, file);
+    fclose(file);
+
+    for (int x = 0; x < IMAGE_WIDTH; x++) {
+        set_window(x, x, 0, IMAGE_HEIGHT-1);
+        send_cmd(RAMWR);
+        send_color(&img_buf[x * IMAGE_HEIGHT], IMAGE_HEIGHT);
+    }
+    
+    free(img_buf);
+}
+
 
 void app_main() {
     mount_spiffs();  
     load_font();     
 
     INIT();  
-    const char* numbers[] = {
-        "1",
-        "2",
-        "20",
-        "4",
-        "5",
-        "6",
-        "7",
-        "8",
-        "9",
-        "10",
-        "11",
-        "12",
-        "20"
-    };
-    draw_rectangle(0,0,TFT_WIDTH, TFT_HEIGHT, rgb888_to_rgb565(255, 255, 255));
     while (1)
     {
-        for(int i = 0; i <13; i++){
-            draw_text_scaled(10, 20, numbers[i], rgb888_to_rgb565(205, 127, 115), 3);
-            vTaskDelay(4);
-            draw_rectangle(10, 20, 100, 100, rgb888_to_rgb565(255, 255,255));
-        }
-        }
-        
-   
+        load_image(IMAGE_FILE);
+        vTaskDelay(10);
+        load_image(IMAGEFILE_2);
+        vTaskDelay(10);
+    }
+
 }
