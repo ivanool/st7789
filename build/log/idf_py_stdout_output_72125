@@ -1,0 +1,74 @@
+[0/1] Re-running CMake...
+-- Component directory /home/ivanool/Escritorio/KANA/TOHA/components/spiffs_image does not contain a CMakeLists.txt file. No component will be added
+-- Building ESP-IDF components for target esp32
+-- Project sdkconfig file /home/ivanool/Escritorio/KANA/TOHA/sdkconfig
+-- Compiler supported targets: xtensa-esp-elf
+-- App "TOHA" version: 4754ead-dirty
+-- Adding linker script /home/ivanool/Escritorio/KANA/TOHA/build/esp-idf/esp_system/ld/memory.ld
+-- Adding linker script /home/ivanool/esp/esp-idf/components/esp_system/ld/esp32/sections.ld.in
+-- Adding linker script /home/ivanool/esp/esp-idf/components/esp_rom/esp32/ld/esp32.rom.ld
+-- Adding linker script /home/ivanool/esp/esp-idf/components/esp_rom/esp32/ld/esp32.rom.api.ld
+-- Adding linker script /home/ivanool/esp/esp-idf/components/esp_rom/esp32/ld/esp32.rom.libgcc.ld
+-- Adding linker script /home/ivanool/esp/esp-idf/components/esp_rom/esp32/ld/esp32.rom.newlib-data.ld
+-- Adding linker script /home/ivanool/esp/esp-idf/components/esp_rom/esp32/ld/esp32.rom.syscalls.ld
+-- Adding linker script /home/ivanool/esp/esp-idf/components/esp_rom/esp32/ld/esp32.rom.newlib-funcs.ld
+-- Adding linker script /home/ivanool/esp/esp-idf/components/soc/esp32/ld/esp32.peripherals.ld
+-- Components: app_trace app_update bootloader bootloader_support bt cmock console cxx driver efuse esp-tls esp_adc esp_app_format esp_bootloader_format esp_coex esp_common esp_eth esp_event esp_gdbstub esp_hid esp_http_client esp_http_server esp_https_ota esp_https_server esp_hw_support esp_lcd esp_local_ctrl esp_mm esp_netif esp_netif_stack esp_partition esp_phy esp_pm esp_psram esp_ringbuf esp_rom esp_system esp_timer esp_wifi espcoredump esptool_py fatfs freertos hal heap http_parser idf_test ieee802154 ixora json log lwip main mbedtls mqtt newlib nvs_flash nvs_sec_provider openthread partition_table perfmon protobuf-c protocomm pthread sdmmc soc spi_flash spiffs st7789 tcp_transport ulp unity usb vfs wear_levelling wifi_provisioning wpa_supplicant xtensa
+-- Component paths: /home/ivanool/esp/esp-idf/components/app_trace /home/ivanool/esp/esp-idf/components/app_update /home/ivanool/esp/esp-idf/components/bootloader /home/ivanool/esp/esp-idf/components/bootloader_support /home/ivanool/esp/esp-idf/components/bt /home/ivanool/esp/esp-idf/components/cmock /home/ivanool/esp/esp-idf/components/console /home/ivanool/esp/esp-idf/components/cxx /home/ivanool/esp/esp-idf/components/driver /home/ivanool/esp/esp-idf/components/efuse /home/ivanool/esp/esp-idf/components/esp-tls /home/ivanool/esp/esp-idf/components/esp_adc /home/ivanool/esp/esp-idf/components/esp_app_format /home/ivanool/esp/esp-idf/components/esp_bootloader_format /home/ivanool/esp/esp-idf/components/esp_coex /home/ivanool/esp/esp-idf/components/esp_common /home/ivanool/esp/esp-idf/components/esp_eth /home/ivanool/esp/esp-idf/components/esp_event /home/ivanool/esp/esp-idf/components/esp_gdbstub /home/ivanool/esp/esp-idf/components/esp_hid /home/ivanool/esp/esp-idf/components/esp_http_client /home/ivanool/esp/esp-idf/components/esp_http_server /home/ivanool/esp/esp-idf/components/esp_https_ota /home/ivanool/esp/esp-idf/components/esp_https_server /home/ivanool/esp/esp-idf/components/esp_hw_support /home/ivanool/esp/esp-idf/components/esp_lcd /home/ivanool/esp/esp-idf/components/esp_local_ctrl /home/ivanool/esp/esp-idf/components/esp_mm /home/ivanool/esp/esp-idf/components/esp_netif /home/ivanool/esp/esp-idf/components/esp_netif_stack /home/ivanool/esp/esp-idf/components/esp_partition /home/ivanool/esp/esp-idf/components/esp_phy /home/ivanool/esp/esp-idf/components/esp_pm /home/ivanool/esp/esp-idf/components/esp_psram /home/ivanool/esp/esp-idf/components/esp_ringbuf /home/ivanool/esp/esp-idf/components/esp_rom /home/ivanool/esp/esp-idf/components/esp_system /home/ivanool/esp/esp-idf/components/esp_timer /home/ivanool/esp/esp-idf/components/esp_wifi /home/ivanool/esp/esp-idf/components/espcoredump /home/ivanool/esp/esp-idf/components/esptool_py /home/ivanool/esp/esp-idf/components/fatfs /home/ivanool/esp/esp-idf/components/freertos /home/ivanool/esp/esp-idf/components/hal /home/ivanool/esp/esp-idf/components/heap /home/ivanool/esp/esp-idf/components/http_parser /home/ivanool/esp/esp-idf/components/idf_test /home/ivanool/esp/esp-idf/components/ieee802154 /home/ivanool/Escritorio/KANA/TOHA/components/ixora /home/ivanool/esp/esp-idf/components/json /home/ivanool/esp/esp-idf/components/log /home/ivanool/esp/esp-idf/components/lwip /home/ivanool/Escritorio/KANA/TOHA/main /home/ivanool/esp/esp-idf/components/mbedtls /home/ivanool/esp/esp-idf/components/mqtt /home/ivanool/esp/esp-idf/components/newlib /home/ivanool/esp/esp-idf/components/nvs_flash /home/ivanool/esp/esp-idf/components/nvs_sec_provider /home/ivanool/esp/esp-idf/components/openthread /home/ivanool/esp/esp-idf/components/partition_table /home/ivanool/esp/esp-idf/components/perfmon /home/ivanool/esp/esp-idf/components/protobuf-c /home/ivanool/esp/esp-idf/components/protocomm /home/ivanool/esp/esp-idf/components/pthread /home/ivanool/esp/esp-idf/components/sdmmc /home/ivanool/esp/esp-idf/components/soc /home/ivanool/esp/esp-idf/components/spi_flash /home/ivanool/esp/esp-idf/components/spiffs /home/ivanool/Escritorio/KANA/TOHA/components/st7789 /home/ivanool/esp/esp-idf/components/tcp_transport /home/ivanool/esp/esp-idf/components/ulp /home/ivanool/esp/esp-idf/components/unity /home/ivanool/esp/esp-idf/components/usb /home/ivanool/esp/esp-idf/components/vfs /home/ivanool/esp/esp-idf/components/wear_levelling /home/ivanool/esp/esp-idf/components/wifi_provisioning /home/ivanool/esp/esp-idf/components/wpa_supplicant /home/ivanool/esp/esp-idf/components/xtensa
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/ivanool/Escritorio/KANA/TOHA/build
+[1/5] Performing build step for 'bootloader'
+[1/1] cd /home/ivanool/Escritorio/KANA/TOHA/build/bootloader/esp-idf/esptool_py && /home/ivanool/.espressif/python_env/idf5.2_py3.12_env/bin/python /home/ivanool/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 /home/ivanool/Escritorio/KANA/TOHA/build/bootloader/bootloader.bin
+Bootloader binary size 0x6870 bytes. 0x790 bytes (7%) free.
+[2/5] No install step for 'bootloader'
+[3/5] Completed 'bootloader'
+[4/5] cd /home/ivanool/Escritorio/KANA/TOHA/build/esp-idf/esptool_py && /home/ivanool/.espressif/python_env/idf5.2_py3.12_env/bin/python /home/ivanool/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /home/ivanool/Escritorio/KANA/TOHA/build/partition_table/partition-table.bin /home/ivanool/Escritorio/KANA/TOHA/build/TOHA.bin
+TOHA.bin binary size 0x3c340 bytes. Smallest app partition is 0x1a0000 bytes. 0x163cc0 bytes (86%) free.
+[4/5] cd /home/ivanool/esp/esp-idf/components/esptool_py && /usr/bin/cmake -D IDF_PATH=/home/ivanool/esp/esp-idf -D "SERIAL_TOOL=/home/ivanool/.espressif/python_env/idf5.2_py3.12_env/bin/python;;/home/ivanool/esp/esp-idf/components/esptool_py/esptool/esptool.py;--chip;esp32" -D "SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args" -D WORKING_DIRECTORY=/home/ivanool/Escritorio/KANA/TOHA/build -P /home/ivanool/esp/esp-idf/components/esptool_py/run_serial_tool.cmake
+esptool.py --chip esp32 -p /dev/ttyACM0 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 80m --flash_size 16MB 0x1000 bootloader/bootloader.bin 0x10000 TOHA.bin 0x8000 partition_table/partition-table.bin 0xe000 ota_data_initial.bin
+esptool.py v4.8.1
+Serial port /dev/ttyACM0
+Connecting....
+Chip is ESP32-D0WDQ6-V3 (revision v3.1)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+Crystal is 40MHz
+MAC: 08:f9:e0:d3:ab:f8
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00001000 to 0x00007fff...
+Flash will be erased from 0x00010000 to 0x0004cfff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+Flash will be erased from 0x0000e000 to 0x0000ffff...
+SHA digest in image updated
+Compressed 26736 bytes to 16373...
+Writing at 0x00001000... (100 %)
+Wrote 26736 bytes (16373 compressed) at 0x00001000 in 0.8 seconds (effective 264.2 kbit/s)...
+Hash of data verified.
+Compressed 246592 bytes to 135323...
+Writing at 0x00010000... (11 %)
+Writing at 0x0001c736... (22 %)
+Writing at 0x00023f32... (33 %)
+Writing at 0x00029c48... (44 %)
+Writing at 0x0002fa81... (55 %)
+Writing at 0x00036512... (66 %)
+Writing at 0x0003e55c... (77 %)
+Writing at 0x00044182... (88 %)
+Writing at 0x0004a827... (100 %)
+Wrote 246592 bytes (135323 compressed) at 0x00010000 in 3.4 seconds (effective 583.6 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 129...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (129 compressed) at 0x00008000 in 0.1 seconds (effective 409.0 kbit/s)...
+Hash of data verified.
+Compressed 8192 bytes to 31...
+Writing at 0x0000e000... (100 %)
+Wrote 8192 bytes (31 compressed) at 0x0000e000 in 0.1 seconds (effective 558.9 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...

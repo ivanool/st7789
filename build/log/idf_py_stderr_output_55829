@@ -1,0 +1,23 @@
+[0;33m--- esp-idf-monitor 1.5.0 on /dev/ttyACM0 115200[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x400e0db7: task_wdt_timeout_handling at /home/ivanool/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:441
+0x400e117c: task_wdt_isr at /home/ivanool/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:515
+0x4008315d: _xt_lowint1 at /home/ivanool/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x4008b7ea: spi_ll_master_set_line_mode at /home/ivanool/esp/esp-idf/components/hal/esp32/include/hal/spi_ll.h:546
+0x4008bc5c: spi_hal_setup_trans at /home/ivanool/esp/esp-idf/components/hal/spi_hal_iram.c:77
+0x40083bc9: spi_new_trans at /home/ivanool/esp/esp-idf/components/driver/spi/gpspi/spi_master.c:651
+0x40083f0d: spi_device_polling_start at /home/ivanool/esp/esp-idf/components/driver/spi/gpspi/spi_master.c:1129
+0x40083fde: spi_device_polling_transmit at /home/ivanool/esp/esp-idf/components/driver/spi/gpspi/spi_master.c:1184
+0x400d5a55: send_data at /home/ivanool/Escritorio/KANA/TOHA/components/st7789/src/st7789.c:20
+0x400d5a7e: send_word at /home/ivanool/Escritorio/KANA/TOHA/components/st7789/src/st7789.c:25
+0x400d5b79: set_window at /home/ivanool/Escritorio/KANA/TOHA/components/st7789/src/st7789.c:102
+0x400d5ce5: draw_pixel at /home/ivanool/Escritorio/KANA/TOHA/components/st7789/src/st7789.c:183
+0x400d5f56: draw_char at /home/ivanool/Escritorio/KANA/TOHA/components/ixora/src/ixora.c:109
+0x400d5fc9: draw_string at /home/ivanool/Escritorio/KANA/TOHA/components/ixora/src/ixora.c:125
+0x400d59d9: app_main at /home/ivanool/Escritorio/KANA/TOHA/main/TOHA.c:44
+0x400ed4b8: main_task at /home/ivanool/esp/esp-idf/components/freertos/app_startup.c:208
+0x40087b11: vPortTaskWrapper at /home/ivanool/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+E

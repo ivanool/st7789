@@ -1,0 +1,223 @@
+[0;33m--- esp-idf-monitor 1.5.0 on /dev/ttyACM0 115200[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x400d5a6d: send_data at /home/ivanool/Escritorio/KANA/TOHA/components/st7789/src/st7789.c:20 (discriminator 1)
+[0m
+[0;33m--- 0x4008709f: _esp_error_check_failed at /home/ivanool/esp/esp-idf/components/esp_system/esp_err.c:50
+[0m
+[0;33m--- 0x40081756: panic_abort at /home/ivanool/esp/esp-idf/components/esp_system/panic.c:472
+0x400870a9: esp_system_abort at /home/ivanool/esp/esp-idf/components/esp_system/port/esp_system_chip.c:93
+0x4008de8d: abort at /home/ivanool/esp/esp-idf/components/newlib/abort.c:38
+0x4008709f: _esp_error_check_failed at /home/ivanool/esp/esp-idf/components/esp_system/esp_err.c:50
+0x400d5a6d: send_data at /home/ivanool/Escritorio/KANA/TOHA/components/st7789/src/st7789.c:20 (discriminator 1)
+0x400d5f85: draw_char at /home/ivanool/Escritorio/KANA/TOHA/components/ixora/src/ixora.c:145
+0x400d5fc9: draw_string at /home/ivanool/Escritorio/KANA/TOHA/components/ixora/src/ixora.c:158
+0x400d59e2: app_main at /home/ivanool/Escritorio/KANA/TOHA/main/TOHA.c:44
+0x400ed4b8: main_task at /home/ivanool/esp/esp-idf/components/freertos/app_startup.c:208
+0x40087b11: vPortTaskWrapper at /home/ivanool/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x400d5a6d: send_data at /home/ivanool/Escritorio/KANA/TOHA/components/st7789/src/st7789.c:20 (discriminator 1)
+[0m
+[0;33m--- 0x4008709f: _esp_error_check_failed at /home/ivanool/esp/esp-idf/components/esp_system/esp_err.c:50
+[0m
+[0;33m--- 0x40081756: panic_abort at /home/ivanool/esp/esp-idf/components/esp_system/panic.c:472
+0x400870a9: esp_system_abort at /home/ivanool/esp/esp-idf/components/esp_system/port/esp_system_chip.c:93
+0x4008de8d: abort at /home/ivanool/esp/esp-idf/components/newlib/abort.c:38
+0x4008709f: _esp_error_check_failed at /home/ivanool/esp/esp-idf/components/esp_system/esp_err.c:50
+0x400d5a6d: send_data at /home/ivanool/Escritorio/KANA/TOHA/components/st7789/src/st7789.c:20 (discriminator 1)
+0x400d5f85: draw_char at /home/ivanool/Escritorio/KANA/TOHA/components/ixora/src/ixora.c:145
+0x400d5fc9: draw_string at /home/ivanool/Escritorio/KANA/TOHA/components/ixora/src/ixora.c:158
+0x400d59e2: app_main at /home/ivanool/Escritorio/KANA/TOHA/main/TOHA.c:44
+0x400ed4b8: main_task at /home/ivanool/esp/esp-idf/components/freertos/app_startup.c:208
+0x40087b11: vPortTaskWrapper at /home/ivanool/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x400d5a6d: send_data at /home/ivanool/Escritorio/KANA/TOHA/components/st7789/src/st7789.c:20 (discriminator 1)
+[0m
+[0;33m--- 0x4008709f: _esp_error_check_failed at /home/ivanool/esp/esp-idf/components/esp_system/esp_err.c:50
+[0m
+[0;33m--- 0x40081756: panic_abort at /home/ivanool/esp/esp-idf/components/esp_system/panic.c:472
+0x400870a9: esp_system_abort at /home/ivanool/esp/esp-idf/components/esp_system/port/esp_system_chip.c:93
+[0m
+[0;33m--- 0x4008de8d: abort at /home/ivanool/esp/esp-idf/components/newlib/abort.c:38
+0x4008709f: _esp_error_check_failed at /home/ivanool/esp/esp-idf/components/esp_system/esp_err.c:50
+0x400d5a6d: send_data at /home/ivanool/Escritorio/KANA/TOHA/components/st7789/src/st7789.c:20 (discriminator 1)
+0x400d5f85: draw_char at /home/ivanool/Escritorio/KANA/TOHA/components/ixora/src/ixora.c:145
+0x400d5fc9: draw_string at /home/ivanool/Escritorio/KANA/TOHA/components/ixora/src/ixora.c:158
+[0m
+[0;33m--- 0x400ed4b8: main_task at /home/ivanool/esp/esp-idf/components/freertos/app_startup.c:208
+0x40087b11: vPortTaskWrapper at /home/ivanool/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x400d5a6d: send_data at /home/ivanool/Escritorio/KANA/TOHA/components/st7789/src/st7789.c:20 (discriminator 1)
+[0m
+[0;33m--- 0x4008709f: _esp_error_check_failed at /home/ivanool/esp/esp-idf/components/esp_system/esp_err.c:50
+[0m
+[0;33m--- 0x40081756: panic_abort at /home/ivanool/esp/esp-idf/components/esp_system/panic.c:472
+0x400870a9: esp_system_abort at /home/ivanool/esp/esp-idf/components/esp_system/port/esp_system_chip.c:93
+0x4008de8d: abort at /home/ivanool/esp/esp-idf/components/newlib/abort.c:38
+0x4008709f: _esp_error_check_failed at /home/ivanool/esp/esp-idf/components/esp_system/esp_err.c:50
+0x400d5a6d: send_data at /home/ivanool/Escritorio/KANA/TOHA/components/st7789/src/st7789.c:20 (discriminator 1)
+0x400d5f85: draw_char at /home/ivanool/Escritorio/KANA/TOHA/components/ixora/src/ixora.c:145
+0x400d5fc9: draw_string at /home/ivanool/Escritorio/KANA/TOHA/components/ixora/src/ixora.c:158
+0x400d59e2: app_main at /home/ivanool/Escritorio/KANA/TOHA/main/TOHA.c:44
+0x400ed4b8: main_task at /home/ivanool/esp/esp-idf/components/freertos/app_startup.c:208
+0x40087b11: vPortTaskWrapper at /home/ivanool/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x400d5a6d: send_data at /home/ivanool/Escritorio/KANA/TOHA/components/st7789/src/st7789.c:20 (discriminator 1)
+[0m
+[0;33m--- 0x4008709f: _esp_error_check_failed at /home/ivanool/esp/esp-idf/components/esp_system/esp_err.c:50
+[0m
+[0;33m--- 0x40081756: panic_abort at /home/ivanool/esp/esp-idf/components/esp_system/panic.c:472
+0x400870a9: esp_system_abort at /home/ivanool/esp/esp-idf/components/esp_system/port/esp_system_chip.c:93
+0x4008de8d: abort at /home/ivanool/esp/esp-idf/components/newlib/abort.c:38
+0x4008709f: _esp_error_check_failed at /home/ivanool/esp/esp-idf/components/esp_system/esp_err.c:50
+0x400d5a6d: send_data at /home/ivanool/Escritorio/KANA/TOHA/components/st7789/src/st7789.c:20 (discriminator 1)
+0x400d5f85: draw_char at /home/ivanool/Escritorio/KANA/TOHA/components/ixora/src/ixora.c:145
+0x400d5fc9: draw_string at /home/ivanool/Escritorio/KANA/TOHA/components/ixora/src/ixora.c:158
+0x400d59e2: app_main at /home/ivanool/Escritorio/KANA/TOHA/main/TOHA.c:44
+0x400ed4b8: main_task at /home/ivanool/esp/esp-idf/components/freertos/app_startup.c:208
+0x40087b11: vPortTaskWrapper at /home/ivanool/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x400d5a6d: send_data at /home/ivanool/Escritorio/KANA/TOHA/components/st7789/src/st7789.c:20 (discriminator 1)
+[0m
+[0;33m--- 0x4008709f: _esp_error_check_failed at /home/ivanool/esp/esp-idf/components/esp_system/esp_err.c:50
+[0m
+[0;33m--- 0x40081756: panic_abort at /home/ivanool/esp/esp-idf/components/esp_system/panic.c:472
+0x400870a9: esp_system_abort at /home/ivanool/esp/esp-idf/components/esp_system/port/esp_system_chip.c:93
+0x4008de8d: abort at /home/ivanool/esp/esp-idf/components/newlib/abort.c:38
+0x4008709f: _esp_error_check_failed at /home/ivanool/esp/esp-idf/components/esp_system/esp_err.c:50
+0x400d5a6d: send_data at /home/ivanool/Escritorio/KANA/TOHA/components/st7789/src/st7789.c:20 (discriminator 1)
+0x400d5f85: draw_char at /home/ivanool/Escritorio/KANA/TOHA/components/ixora/src/ixora.c:145
+0x400d5fc9: draw_string at /home/ivanool/Escritorio/KANA/TOHA/components/ixora/src/ixora.c:158
+0x400d59e2: app_main at /home/ivanool/Escritorio/KANA/TOHA/main/TOHA.c:44
+0x400ed4b8: main_task at /home/ivanool/esp/esp-idf/components/freertos/app_startup.c:208
+0x40087b11: vPortTaskWrapper at /home/ivanool/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x400d5a6d: send_data at /home/ivanool/Escritorio/KANA/TOHA/components/st7789/src/st7789.c:20 (discriminator 1)
+[0m
+[0;33m--- 0x4008709f: _esp_error_check_failed at /home/ivanool/esp/esp-idf/components/esp_system/esp_err.c:50
+[0m
+[0;33m--- 0x40081756: panic_abort at /home/ivanool/esp/esp-idf/components/esp_system/panic.c:472
+0x400870a9: esp_system_abort at /home/ivanool/esp/esp-idf/components/esp_system/port/esp_system_chip.c:93
+0x4008de8d: abort at /home/ivanool/esp/esp-idf/components/newlib/abort.c:38
+0x4008709f: _esp_error_check_failed at /home/ivanool/esp/esp-idf/components/esp_system/esp_err.c:50
+0x400d5a6d: send_data at /home/ivanool/Escritorio/KANA/TOHA/components/st7789/src/st7789.c:20 (discriminator 1)
+0x400d5f85: draw_char at /home/ivanool/Escritorio/KANA/TOHA/components/ixora/src/ixora.c:145
+0x400d5fc9: draw_string at /home/ivanool/Escritorio/KANA/TOHA/components/ixora/src/ixora.c:158
+0x400d59e2: app_main at /home/ivanool/Escritorio/KANA/TOHA/main/TOHA.c:44
+0x400ed4b8: main_task at /home/ivanool/esp/esp-idf/components/freertos/app_startup.c:208
+0x40087b11: vPortTaskWrapper at /home/ivanool/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x400d5a6d: send_data at /home/ivanool/Escritorio/KANA/TOHA/components/st7789/src/st7789.c:20 (discriminator 1)
+[0m
+[0;33m--- 0x4008709f: _esp_error_check_failed at /home/ivanool/esp/esp-idf/components/esp_system/esp_err.c:50
+[0m
+[0;33m--- 0x40081756: panic_abort at /home/ivanool/esp/esp-idf/components/esp_system/panic.c:472
+0x400870a9: esp_system_abort at /home/ivanool/esp/esp-idf/components/esp_system/port/esp_system_chip.c:93
+0x4008de8d: abort at /home/ivanool/esp/esp-idf/components/newlib/abort.c:38
+0x4008709f: _esp_error_check_failed at /home/ivanool/esp/esp-idf/components/esp_system/esp_err.c:50
+0x400d5a6d: send_data at /home/ivanool/Escritorio/KANA/TOHA/components/st7789/src/st7789.c:20 (discriminator 1)
+0x400d5f85: draw_char at /home/ivanool/Escritorio/KANA/TOHA/components/ixora/src/ixora.c:145
+0x400d5fc9: draw_string at /home/ivanool/Escritorio/KANA/TOHA/components/ixora/src/ixora.c:158
+0x400d59e2: app_main at /home/ivanool/Escritorio/KANA/TOHA/main/TOHA.c:44
+0x400ed4b8: main_task at /home/ivanool/esp/esp-idf/components/freertos/app_startup.c:208
+0x40087b11: vPortTaskWrapper at /home/ivanool/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x400d5a6d: send_data at /home/ivanool/Escritorio/KANA/TOHA/components/st7789/src/st7789.c:20 (discriminator 1)
+[0m
+[0;33m--- 0x4008709f: _esp_error_check_failed at /home/ivanool/esp/esp-idf/components/esp_system/esp_err.c:50
+[0m
+[0;33m--- 0x40081756: panic_abort at /home/ivanool/esp/esp-idf/components/esp_system/panic.c:472
+0x400870a9: esp_system_abort at /home/ivanool/esp/esp-idf/components/esp_system/port/esp_system_chip.c:93
+0x4008de8d: abort at /home/ivanool/esp/esp-idf/components/newlib/abort.c:38
+0x4008709f: _esp_error_check_failed at /home/ivanool/esp/esp-idf/components/esp_system/esp_err.c:50
+0x400d5a6d: send_data at /home/ivanool/Escritorio/KANA/TOHA/components/st7789/src/st7789.c:20 (discriminator 1)
+0x400d5f85: draw_char at /home/ivanool/Escritorio/KANA/TOHA/components/ixora/src/ixora.c:145
+0x400d5fc9: draw_string at /home/ivanool/Escritorio/KANA/TOHA/components/ixora/src/ixora.c:158
+0x400d59e2: app_main at /home/ivanool/Escritorio/KANA/TOHA/main/TOHA.c:44
+0x400ed4b8: main_task at /home/ivanool/esp/esp-idf/components/freertos/app_startup.c:208
+0x40087b11: vPortTaskWrapper at /home/ivanool/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x400d5a6d: send_data at /home/ivanool/Escritorio/KANA/TOHA/components/st7789/src/st7789.c:20 (discriminator 1)
+[0m
+[0;33m--- 0x4008709f: _esp_error_check_failed at /home/ivanool/esp/esp-idf/components/esp_system/esp_err.c:50
+[0m
+[0;33m--- 0x40081756: panic_abort at /home/ivanool/esp/esp-idf/components/esp_system/panic.c:472
+0x400870a9: esp_system_abort at /home/ivanool/esp/esp-idf/components/esp_system/port/esp_system_chip.c:93
+0x4008de8d: abort at /home/ivanool/esp/esp-idf/components/newlib/abort.c:38
+0x4008709f: _esp_error_check_failed at /home/ivanool/esp/esp-idf/components/esp_system/esp_err.c:50
+0x400d5a6d: send_data at /home/ivanool/Escritorio/KANA/TOHA/components/st7789/src/st7789.c:20 (discriminator 1)
+0x400d5f85: draw_char at /home/ivanool/Escritorio/KANA/TOHA/components/ixora/src/ixora.c:145
+0x400d5fc9: draw_string at /home/ivanool/Escritorio/KANA/TOHA/components/ixora/src/ixora.c:158
+0x400d59e2: app_main at /home/ivanool/Escritorio/KANA/TOHA/main/TOHA.c:44
+0x400ed4b8: main_task at /home/ivanool/esp/esp-idf/components/freertos/app_startup.c:208
+0x40087b11: vPortTaskWrapper at /home/ivanool/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x400d5a6d: send_data at /home/ivanool/Escritorio/KANA/TOHA/components/st7789/src/st7789.c:20 (discriminator 1)
+[0m
+[0;33m--- 0x4008709f: _esp_error_check_failed at /home/ivanool/esp/esp-idf/components/esp_system/esp_err.c:50
+[0m
+[0;33m--- 0x40081756: panic_abort at /home/ivanool/esp/esp-idf/components/esp_system/panic.c:472
+0x400870a9: esp_system_abort at /home/ivanool/esp/esp-idf/components/esp_system/port/esp_system_chip.c:93
+0x4008de8d: abort at /home/ivanool/esp/esp-idf/components/newlib/abort.c:38
+0x4008709f: _esp_error_check_failed at /home/ivanool/esp/esp-idf/components/esp_system/esp_err.c:50
+0x400d5a6d: send_data at /home/ivanool/Escritorio/KANA/TOHA/components/st7789/src/st7789.c:20 (discriminator 1)
+0x400d5f85: draw_char at /home/ivanool/Escritorio/KANA/TOHA/components/ixora/src/ixora.c:145
+0x400d5fc9: draw_string at /home/ivanool/Escritorio/KANA/TOHA/components/ixora/src/ixora.c:158
+0x400d59e2: app_main at /home/ivanool/Escritorio/KANA/TOHA/main/TOHA.c:44
+0x400ed4b8: main_task at /home/ivanool/esp/esp-idf/components/freertos/app_startup.c:208
+0x40087b11: vPortTaskWrapper at /home/ivanool/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x400d5a6d: send_data at /home/ivanool/Escritorio/KANA/TOHA/components/st7789/src/st7789.c:20 (discriminator 1)
+[0m
+[0;33m--- 0x4008709f: _esp_error_check_failed at /home/ivanool/esp/esp-idf/components/esp_system/esp_err.c:50
+[0m
+[0;33m--- 0x40081756: panic_abort at /home/ivanool/esp/esp-idf/components/esp_system/panic.c:472
+0x400870a9: esp_system_abort at /home/ivanool/esp/esp-idf/components/esp_system/port/esp_system_chip.c:93
+0x4008de8d: abort at /home/ivanool/esp/esp-idf/components/newlib/abort.c:38
+0x4008709f: _esp_error_check_failed at /home/ivanool/esp/esp-idf/components/esp_system/esp_err.c:50
+0x400d5a6d: send_data at /home/ivanool/Escritorio/KANA/TOHA/components/st7789/src/st7789.c:20 (discriminator 1)
+0x400d5f85: draw_char at /home/ivanool/Escritorio/KANA/TOHA/components/ixora/src/ixora.c:145
+0x400d5fc9: draw_string at /home/ivanool/Escritorio/KANA/TOHA/components/ixora/src/ixora.c:158
+0x400d59e2: app_main at /home/ivanool/Escritorio/KANA/TOHA/main/TOHA.c:44
+0x400ed4b8: main_task at /home/ivanool/esp/esp-idf/components/freertos/app_startup.c:208
+0x40087b11: vPortTaskWrapper at /home/ivanool/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x400d5a6d: send_data at /home/ivanool/Escritorio/KANA/TOHA/components/st7789/src/st7789.c:20 (discriminator 1)
+[0m
+[0;33m--- 0x4008709f: _esp_error_check_failed at /home/ivanool/esp/esp-idf/components/esp_system/esp_err.c:50
+[0m
+[0;33m--- 0x40081756: panic_abort at /home/ivanool/esp/esp-idf/components/esp_system/panic.c:472
+0x400870a9: esp_system_abort at /home/ivanool/esp/esp-idf/components/esp_system/port/esp_system_chip.c:93
+0x4008de8d: abort at /home/ivanool/esp/esp-idf/components/newlib/abort.c:38
+0x4008709f: _esp_error_check_failed at /home/ivanool/esp/esp-idf/components/esp_system/esp_err.c:50
+0x400d5a6d: send_data at /home/ivanool/Escritorio/KANA/TOHA/components/st7789/src/st7789.c:20 (discriminator 1)
+0x400d5f85: draw_char at /home/ivanool/Escritorio/KANA/TOHA/components/ixora/src/ixora.c:145
+0x400d5fc9: draw_string at /home/ivanool/Escritorio/KANA/TOHA/components/ixora/src/ixora.c:158
+0x400d59e2: app_main at /home/ivanool/Escritorio/KANA/TOHA/main/TOHA.c:44
+0x400ed4b8: main_task at /home/ivanool/esp/esp-idf/components/freertos/app_startup.c:208
+0x40087b11: vPortTaskWrapper at /home/ivanool/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portab

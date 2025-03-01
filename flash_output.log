@@ -1,0 +1,268 @@
+Executing action: flash
+Serial port /dev/ttyS9
+/dev/ttyS9 failed to connect: Could not open /dev/ttyS9, the port is busy or doesn't exist.
+(Could not configure port: (5, 'Input/output error'))
+
+Serial port /dev/ttyS8
+/dev/ttyS8 failed to connect: Could not open /dev/ttyS8, the port is busy or doesn't exist.
+(Could not configure port: (5, 'Input/output error'))
+
+Serial port /dev/ttyS7
+/dev/ttyS7 failed to connect: Could not open /dev/ttyS7, the port is busy or doesn't exist.
+(Could not configure port: (5, 'Input/output error'))
+
+Serial port /dev/ttyS6
+/dev/ttyS6 failed to connect: Could not open /dev/ttyS6, the port is busy or doesn't exist.
+(Could not configure port: (5, 'Input/output error'))
+
+Serial port /dev/ttyS5
+/dev/ttyS5 failed to connect: Could not open /dev/ttyS5, the port is busy or doesn't exist.
+(Could not configure port: (5, 'Input/output error'))
+
+Serial port /dev/ttyS4
+/dev/ttyS4 failed to connect: Could not open /dev/ttyS4, the port is busy or doesn't exist.
+(Could not configure port: (5, 'Input/output error'))
+
+Serial port /dev/ttyS31
+/dev/ttyS31 failed to connect: Could not open /dev/ttyS31, the port is busy or doesn't exist.
+(Could not configure port: (5, 'Input/output error'))
+
+Serial port /dev/ttyS30
+/dev/ttyS30 failed to connect: Could not open /dev/ttyS30, the port is busy or doesn't exist.
+(Could not configure port: (5, 'Input/output error'))
+
+Serial port /dev/ttyS3
+/dev/ttyS3 failed to connect: Could not open /dev/ttyS3, the port is busy or doesn't exist.
+(Could not configure port: (5, 'Input/output error'))
+
+Serial port /dev/ttyS29
+/dev/ttyS29 failed to connect: Could not open /dev/ttyS29, the port is busy or doesn't exist.
+(Could not configure port: (5, 'Input/output error'))
+
+Serial port /dev/ttyS28
+/dev/ttyS28 failed to connect: Could not open /dev/ttyS28, the port is busy or doesn't exist.
+(Could not configure port: (5, 'Input/output error'))
+
+Serial port /dev/ttyS27
+/dev/ttyS27 failed to connect: Could not open /dev/ttyS27, the port is busy or doesn't exist.
+(Could not configure port: (5, 'Input/output error'))
+
+Serial port /dev/ttyS26
+/dev/ttyS26 failed to connect: Could not open /dev/ttyS26, the port is busy or doesn't exist.
+(Could not configure port: (5, 'Input/output error'))
+
+Serial port /dev/ttyS25
+/dev/ttyS25 failed to connect: Could not open /dev/ttyS25, the port is busy or doesn't exist.
+(Could not configure port: (5, 'Input/output error'))
+
+Serial port /dev/ttyS24
+/dev/ttyS24 failed to connect: Could not open /dev/ttyS24, the port is busy or doesn't exist.
+(Could not configure port: (5, 'Input/output error'))
+
+Serial port /dev/ttyS23
+/dev/ttyS23 failed to connect: Could not open /dev/ttyS23, the port is busy or doesn't exist.
+(Could not configure port: (5, 'Input/output error'))
+
+Serial port /dev/ttyS22
+/dev/ttyS22 failed to connect: Could not open /dev/ttyS22, the port is busy or doesn't exist.
+(Could not configure port: (5, 'Input/output error'))
+
+Serial port /dev/ttyS21
+/dev/ttyS21 failed to connect: Could not open /dev/ttyS21, the port is busy or doesn't exist.
+(Could not configure port: (5, 'Input/output error'))
+
+Serial port /dev/ttyS20
+/dev/ttyS20 failed to connect: Could not open /dev/ttyS20, the port is busy or doesn't exist.
+(Could not configure port: (5, 'Input/output error'))
+
+Serial port /dev/ttyS2
+/dev/ttyS2 failed to connect: Could not open /dev/ttyS2, the port is busy or doesn't exist.
+(Could not configure port: (5, 'Input/output error'))
+
+Serial port /dev/ttyS19
+/dev/ttyS19 failed to connect: Could not open /dev/ttyS19, the port is busy or doesn't exist.
+(Could not configure port: (5, 'Input/output error'))
+
+Serial port /dev/ttyS18
+/dev/ttyS18 failed to connect: Could not open /dev/ttyS18, the port is busy or doesn't exist.
+(Could not configure port: (5, 'Input/output error'))
+
+Serial port /dev/ttyS17
+/dev/ttyS17 failed to connect: Could not open /dev/ttyS17, the port is busy or doesn't exist.
+(Could not configure port: (5, 'Input/output error'))
+
+Serial port /dev/ttyS16
+/dev/ttyS16 failed to connect: Could not open /dev/ttyS16, the port is busy or doesn't exist.
+(Could not configure port: (5, 'Input/output error'))
+
+Serial port /dev/ttyS15
+/dev/ttyS15 failed to connect: Could not open /dev/ttyS15, the port is busy or doesn't exist.
+(Could not configure port: (5, 'Input/output error'))
+
+Serial port /dev/ttyS14
+/dev/ttyS14 failed to connect: Could not open /dev/ttyS14, the port is busy or doesn't exist.
+(Could not configure port: (5, 'Input/output error'))
+
+Serial port /dev/ttyS13
+/dev/ttyS13 failed to connect: Could not open /dev/ttyS13, the port is busy or doesn't exist.
+(Could not configure port: (5, 'Input/output error'))
+
+Serial port /dev/ttyS12
+/dev/ttyS12 failed to connect: Could not open /dev/ttyS12, the port is busy or doesn't exist.
+(Could not configure port: (5, 'Input/output error'))
+
+Serial port /dev/ttyS11
+/dev/ttyS11 failed to connect: Could not open /dev/ttyS11, the port is busy or doesn't exist.
+(Could not configure port: (5, 'Input/output error'))
+
+Serial port /dev/ttyS10
+/dev/ttyS10 failed to connect: Could not open /dev/ttyS10, the port is busy or doesn't exist.
+(Could not configure port: (5, 'Input/output error'))
+
+Serial port /dev/ttyS1
+/dev/ttyS1 failed to connect: Could not open /dev/ttyS1, the port is busy or doesn't exist.
+(Could not configure port: (5, 'Input/output error'))
+
+Serial port /dev/ttyS0
+/dev/ttyS0 failed to connect: Could not open /dev/ttyS0, the port is busy or doesn't exist.
+(Could not configure port: (5, 'Input/output error'))
+
+Serial port /dev/ttyACM0
+Connecting....
+Detecting chip type... Unsupported detection protocol, switching and trying again...
+Connecting....
+Detecting chip type... ESP32
+Running ninja in directory /home/ivanool/Escritorio/KANA/TOHA/build
+Executing "ninja flash"...
+[1/11] Performing build step for 'bootloader'
+[1/1] cd /home/ivanool/Escritorio/KANA/TOHA/build/bootloader/esp-idf/esptool_py && /home/ivanool/.espressif/python_env/idf5.2_py3.12_env/bin/python /home/ivanool/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 /home/ivanool/Escritorio/KANA/TOHA/build/bootloader/bootloader.bin
+Bootloader binary size 0x6860 bytes. 0x7a0 bytes (7%) free.
+[2/11] No install step for 'bootloader'
+[3/11] Completed 'bootloader'
+[4/11] Building C object esp-idf/st7789/CMakeFiles/__idf_st7789.dir/src/st7789.c.obj
+FAILED: esp-idf/st7789/CMakeFiles/__idf_st7789.dir/src/st7789.c.obj 
+/home/ivanool/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc -DESP_PLATFORM -DIDF_VER=\"v5.2.1\" -DSOC_MMU_PAGE_SIZE=CONFIG_MMU_PAGE_SIZE -DSOC_XTAL_FREQ_MHZ=CONFIG_XTAL_FREQ -D_GLIBCXX_HAVE_POSIX_SEMAPHORE -D_GLIBCXX_USE_POSIX_SEMAPHORE -D_GNU_SOURCE -D_POSIX_READER_WRITER_LOCKS -I/home/ivanool/Escritorio/KANA/TOHA/build/config -I/home/ivanool/Escritorio/KANA/TOHA/components/st7789/include -I/home/ivanool/esp/esp-idf/components/newlib/platform_include -I/home/ivanool/esp/esp-idf/components/freertos/config/include -I/home/ivanool/esp/esp-idf/components/freertos/config/include/freertos -I/home/ivanool/esp/esp-idf/components/freertos/config/xtensa/include -I/home/ivanool/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include -I/home/ivanool/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include -I/home/ivanool/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos -I/home/ivanool/esp/esp-idf/components/freertos/esp_additions/include -I/home/ivanool/esp/esp-idf/components/esp_hw_support/include -I/home/ivanool/esp/esp-idf/components/esp_hw_support/include/soc -I/home/ivanool/esp/esp-idf/components/esp_hw_support/include/soc/esp32 -I/home/ivanool/esp/esp-idf/components/esp_hw_support/port/esp32/. -I/home/ivanool/esp/esp-idf/components/heap/include -I/home/ivanool/esp/esp-idf/components/log/include -I/home/ivanool/esp/esp-idf/components/soc/include -I/home/ivanool/esp/esp-idf/components/soc/esp32 -I/home/ivanool/esp/esp-idf/components/soc/esp32/include -I/home/ivanool/esp/esp-idf/components/hal/platform_port/include -I/home/ivanool/esp/esp-idf/components/hal/esp32/include -I/home/ivanool/esp/esp-idf/components/hal/include -I/home/ivanool/esp/esp-idf/components/esp_rom/include -I/home/ivanool/esp/esp-idf/components/esp_rom/include/esp32 -I/home/ivanool/esp/esp-idf/components/esp_rom/esp32 -I/home/ivanool/esp/esp-idf/components/esp_common/include -I/home/ivanool/esp/esp-idf/components/esp_system/include -I/home/ivanool/esp/esp-idf/components/esp_system/port/soc -I/home/ivanool/esp/esp-idf/components/esp_system/port/include/private -I/home/ivanool/esp/esp-idf/components/xtensa/esp32/include -I/home/ivanool/esp/esp-idf/components/xtensa/include -I/home/ivanool/esp/esp-idf/components/xtensa/deprecated_include -I/home/ivanool/esp/esp-idf/components/lwip/include -I/home/ivanool/esp/esp-idf/components/lwip/include/apps -I/home/ivanool/esp/esp-idf/components/lwip/include/apps/sntp -I/home/ivanool/esp/esp-idf/components/lwip/lwip/src/include -I/home/ivanool/esp/esp-idf/components/lwip/port/include -I/home/ivanool/esp/esp-idf/components/lwip/port/freertos/include -I/home/ivanool/esp/esp-idf/components/lwip/port/esp32xx/include -I/home/ivanool/esp/esp-idf/components/lwip/port/esp32xx/include/arch -I/home/ivanool/esp/esp-idf/components/lwip/port/esp32xx/include/sys -I/home/ivanool/esp/esp-idf/components/driver/include -I/home/ivanool/esp/esp-idf/components/driver/deprecated -I/home/ivanool/esp/esp-idf/components/driver/analog_comparator/include -I/home/ivanool/esp/esp-idf/components/driver/dac/include -I/home/ivanool/esp/esp-idf/components/driver/gpio/include -I/home/ivanool/esp/esp-idf/components/driver/gptimer/include -I/home/ivanool/esp/esp-idf/components/driver/i2c/include -I/home/ivanool/esp/esp-idf/components/driver/i2s/include -I/home/ivanool/esp/esp-idf/components/driver/ledc/include -I/home/ivanool/esp/esp-idf/components/driver/mcpwm/include -I/home/ivanool/esp/esp-idf/components/driver/parlio/include -I/home/ivanool/esp/esp-idf/components/driver/pcnt/include -I/home/ivanool/esp/esp-idf/components/driver/rmt/include -I/home/ivanool/esp/esp-idf/components/driver/sdio_slave/include -I/home/ivanool/esp/esp-idf/components/driver/sdmmc/include -I/home/ivanool/esp/esp-idf/components/driver/sigma_delta/include -I/home/ivanool/esp/esp-idf/components/driver/spi/include -I/home/ivanool/esp/esp-idf/components/driver/temperature_sensor/include -I/home/ivanool/esp/esp-idf/components/driver/touch_sensor/include -I/home/ivanool/esp/esp-idf/components/driver/twai/include -I/home/ivanool/esp/esp-idf/components/driver/uart/include -I/home/ivanool/esp/esp-idf/components/driver/usb_serial_jtag/include -I/home/ivanool/esp/esp-idf/components/driver/touch_sensor/esp32/include -I/home/ivanool/esp/esp-idf/components/esp_pm/include -I/home/ivanool/esp/esp-idf/components/esp_ringbuf/include -mlongcalls -Wno-frame-address  -fdiagnostics-color=always -ffunction-sections -fdata-sections -Wall -Werror=all -Wno-error=unused-function -Wno-error=unused-variable -Wno-error=unused-but-set-variable -Wno-error=deprecated-declarations -Wextra -Wno-unused-parameter -Wno-sign-compare -Wno-enum-conversion -gdwarf-4 -ggdb -Og -fno-shrink-wrap -fmacro-prefix-map=/home/ivanool/Escritorio/KANA/TOHA=. -fmacro-prefix-map=/home/ivanool/esp/esp-idf=/IDF -fstrict-volatile-bitfields -fno-jump-tables -fno-tree-switch-conversion -std=gnu17 -Wno-old-style-declaration -MD -MT esp-idf/st7789/CMakeFiles/__idf_st7789.dir/src/st7789.c.obj -MF esp-idf/st7789/CMakeFiles/__idf_st7789.dir/src/st7789.c.obj.d -o esp-idf/st7789/CMakeFiles/__idf_st7789.dir/src/st7789.c.obj -c /home/ivanool/Escritorio/KANA/TOHA/components/st7789/src/st7789.c
+/home/ivanool/Escritorio/KANA/TOHA/components/st7789/src/st7789.c:21:6: error: conflicting types for 'send_data'; have 'void(const uint8_t *, size_t)' {aka 'void(const unsigned char *, unsigned int)'}
+   21 | void send_data(const uint8_t* data, size_t size){
+      |      ^~~~~~~~~
+In file included from /home/ivanool/Escritorio/KANA/TOHA/components/st7789/src/st7789.c:1:
+/home/ivanool/Escritorio/KANA/TOHA/components/st7789/include/st7789.h:68:6: note: previous declaration of 'send_data' with type 'void(uint8_t,  size_t)' {aka 'void(unsigned char,  unsigned int)'}
+   68 | void send_data(uint8_t data, size_t size);
+      |      ^~~~~~~~~
+/home/ivanool/Escritorio/KANA/TOHA/components/st7789/src/st7789.c: In function 'send_word':
+/home/ivanool/Escritorio/KANA/TOHA/components/st7789/src/st7789.c:35:13: warning: unused variable 'buffer' [-Wunused-variable]
+   35 |     uint8_t buffer[2] = {data >> 8, data & 0xFF};
+      |             ^~~~~~
+/home/ivanool/Escritorio/KANA/TOHA/components/st7789/src/st7789.c: At top level:
+/home/ivanool/Escritorio/KANA/TOHA/components/st7789/src/st7789.c:39:6: error: redefinition of 'send_word'
+   39 | void send_word(uint16_t data){
+      |      ^~~~~~~~~
+/home/ivanool/Escritorio/KANA/TOHA/components/st7789/src/st7789.c:33:6: note: previous definition of 'send_word' with type 'void(uint16_t)' {aka 'void(short unsigned int)'}
+   33 | void send_word(uint16_t data){
+      |      ^~~~~~~~~
+/home/ivanool/Escritorio/KANA/TOHA/components/st7789/src/st7789.c: In function 'porch_control':
+/home/ivanool/Escritorio/KANA/TOHA/components/st7789/src/st7789.c:88:19: warning: passing argument 1 of 'send_data' makes pointer from integer without a cast [-Wint-conversion]
+   88 |     send_data(bpa & 0x7F, 1);
+      |               ~~~~^~~~~~
+      |                   |
+      |                   int
+/home/ivanool/Escritorio/KANA/TOHA/components/st7789/src/st7789.c:21:31: note: expected 'const uint8_t *' {aka 'const unsigned char *'} but argument is of type 'int'
+   21 | void send_data(const uint8_t* data, size_t size){
+      |                ~~~~~~~~~~~~~~~^~~~
+/home/ivanool/Escritorio/KANA/TOHA/components/st7789/src/st7789.c:89:19: warning: passing argument 1 of 'send_data' makes pointer from integer without a cast [-Wint-conversion]
+   89 |     send_data(fpa & 0x7F, 1);
+      |               ~~~~^~~~~~
+      |                   |
+      |                   int
+/home/ivanool/Escritorio/KANA/TOHA/components/st7789/src/st7789.c:21:31: note: expected 'const uint8_t *' {aka 'const unsigned char *'} but argument is of type 'int'
+   21 | void send_data(const uint8_t* data, size_t size){
+      |                ~~~~~~~~~~~~~~~^~~~
+/home/ivanool/Escritorio/KANA/TOHA/components/st7789/src/st7789.c:91:15: warning: passing argument 1 of 'send_data' makes pointer from integer without a cast [-Wint-conversion]
+   91 |     send_data(byte3);
+      |               ^~~~~
+      |               |
+      |               uint8_t {aka unsigned char}
+/home/ivanool/Escritorio/KANA/TOHA/components/st7789/src/st7789.c:21:31: note: expected 'const uint8_t *' {aka 'const unsigned char *'} but argument is of type 'uint8_t' {aka 'unsigned char'}
+   21 | void send_data(const uint8_t* data, size_t size){
+      |                ~~~~~~~~~~~~~~~^~~~
+/home/ivanool/Escritorio/KANA/TOHA/components/st7789/src/st7789.c:91:5: error: too few arguments to function 'send_data'
+   91 |     send_data(byte3);
+      |     ^~~~~~~~~
+/home/ivanool/Escritorio/KANA/TOHA/components/st7789/src/st7789.c:21:6: note: declared here
+   21 | void send_data(const uint8_t* data, size_t size){
+      |      ^~~~~~~~~
+/home/ivanool/Escritorio/KANA/TOHA/components/st7789/src/st7789.c:92:19: warning: passing argument 1 of 'send_data' makes pointer from integer without a cast [-Wint-conversion]
+   92 |     send_data(fpb & 0x0F, 1);
+      |               ~~~~^~~~~~
+      |                   |
+      |                   int
+/home/ivanool/Escritorio/KANA/TOHA/components/st7789/src/st7789.c:21:31: note: expected 'const uint8_t *' {aka 'const unsigned char *'} but argument is of type 'int'
+   21 | void send_data(const uint8_t* data, size_t size){
+      |                ~~~~~~~~~~~~~~~^~~~
+/home/ivanool/Escritorio/KANA/TOHA/components/st7789/src/st7789.c:93:19: warning: passing argument 1 of 'send_data' makes pointer from integer without a cast [-Wint-conversion]
+   93 |     send_data(bpc & 0x0F, 1);
+      |               ~~~~^~~~~~
+      |                   |
+      |                   int
+/home/ivanool/Escritorio/KANA/TOHA/components/st7789/src/st7789.c:21:31: note: expected 'const uint8_t *' {aka 'const unsigned char *'} but argument is of type 'int'
+   21 | void send_data(const uint8_t* data, size_t size){
+      |                ~~~~~~~~~~~~~~~^~~~
+/home/ivanool/Escritorio/KANA/TOHA/components/st7789/src/st7789.c:94:19: warning: passing argument 1 of 'send_data' makes pointer from integer without a cast [-Wint-conversion]
+   94 |     send_data(fpc & 0x0F, 1);
+      |               ~~~~^~~~~~
+      |                   |
+      |                   int
+/home/ivanool/Escritorio/KANA/TOHA/components/st7789/src/st7789.c:21:31: note: expected 'const uint8_t *' {aka 'const unsigned char *'} but argument is of type 'int'
+   21 | void send_data(const uint8_t* data, size_t size){
+      |                ~~~~~~~~~~~~~~~^~~~
+/home/ivanool/Escritorio/KANA/TOHA/components/st7789/src/st7789.c: In function 'set_orientation':
+/home/ivanool/Escritorio/KANA/TOHA/components/st7789/src/st7789.c:99:15: warning: passing argument 1 of 'send_data' makes pointer from integer without a cast [-Wint-conversion]
+   99 |     send_data(data, 1);
+      |               ^~~~
+      |               |
+      |               uint8_t {aka unsigned char}
+/home/ivanool/Escritorio/KANA/TOHA/components/st7789/src/st7789.c:21:31: note: expected 'const uint8_t *' {aka 'const unsigned char *'} but argument is of type 'uint8_t' {aka 'unsigned char'}
+   21 | void send_data(const uint8_t* data, size_t size){
+      |                ~~~~~~~~~~~~~~~^~~~
+/home/ivanool/Escritorio/KANA/TOHA/components/st7789/src/st7789.c: In function 'INIT':
+/home/ivanool/Escritorio/KANA/TOHA/components/st7789/src/st7789.c:130:15: warning: passing argument 1 of 'send_data' makes pointer from integer without a cast [-Wint-conversion]
+  130 |     send_data(0x55, 1);
+      |               ^~~~
+      |               |
+      |               int
+/home/ivanool/Escritorio/KANA/TOHA/components/st7789/src/st7789.c:21:31: note: expected 'const uint8_t *' {aka 'const unsigned char *'} but argument is of type 'int'
+   21 | void send_data(const uint8_t* data, size_t size){
+      |                ~~~~~~~~~~~~~~~^~~~
+/home/ivanool/Escritorio/KANA/TOHA/components/st7789/src/st7789.c:134:15: warning: passing argument 1 of 'send_data' makes pointer from integer without a cast [-Wint-conversion]
+  134 |     send_data(0x35, 1);
+      |               ^~~~
+      |               |
+      |               int
+/home/ivanool/Escritorio/KANA/TOHA/components/st7789/src/st7789.c:21:31: note: expected 'const uint8_t *' {aka 'const unsigned char *'} but argument is of type 'int'
+   21 | void send_data(const uint8_t* data, size_t size){
+      |                ~~~~~~~~~~~~~~~^~~~
+/home/ivanool/Escritorio/KANA/TOHA/components/st7789/src/st7789.c:136:15: warning: passing argument 1 of 'send_data' makes pointer from integer without a cast [-Wint-conversion]
+  136 |     send_data(0x1F, 1);
+      |               ^~~~
+      |               |
+      |               int
+/home/ivanool/Escritorio/KANA/TOHA/components/st7789/src/st7789.c:21:31: note: expected 'const uint8_t *' {aka 'const unsigned char *'} but argument is of type 'int'
+   21 | void send_data(const uint8_t* data, size_t size){
+      |                ~~~~~~~~~~~~~~~^~~~
+/home/ivanool/Escritorio/KANA/TOHA/components/st7789/src/st7789.c: In function 'send_color':
+/home/ivanool/Escritorio/KANA/TOHA/components/st7789/src/st7789.c:177:26: error: 'colors' undeclared (first use in this function); did you mean 'color'?
+  177 |         byte[index++] = (colors[i]>>8) & 0xFF;
+      |                          ^~~~~~
+      |                          color
+/home/ivanool/Escritorio/KANA/TOHA/components/st7789/src/st7789.c:177:26: note: each undeclared identifier is reported only once for each function it appears in
+/home/ivanool/Escritorio/KANA/TOHA/components/st7789/src/st7789.c: In function 'draw_pixel':
+/home/ivanool/Escritorio/KANA/TOHA/components/st7789/src/st7789.c:186:16: warning: passing argument 1 of 'send_color' makes integer from pointer without a cast [-Wint-conversion]
+  186 |     send_color(&color, 1);
+      |                ^~~~~~
+      |                |
+      |                uint16_t * {aka short unsigned int *}
+/home/ivanool/Escritorio/KANA/TOHA/components/st7789/src/st7789.c:173:26: note: expected 'uint16_t' {aka 'short unsigned int'} but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+  173 | void send_color(uint16_t color, uint16_t size){
+      |                 ~~~~~~~~~^~~~~
+ninja: build stopped: subcommand failed.
+ninja failed with exit code 1, output of the command is in the /home/ivanool/Escritorio/KANA/TOHA/build/log/idf_py_stderr_output_5973 and /home/ivanool/Escritorio/KANA/TOHA/build/log/idf_py_stdout_output_5973
