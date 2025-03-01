@@ -34,7 +34,7 @@ void mount_spiffs(void) {
     }
 }
 
-
+/*
 void read_hello_txt(void)
 {
     ESP_LOGI(TAG, "Reading hello.txt");
@@ -54,6 +54,17 @@ void read_hello_txt(void)
     // Display the read contents from the file
     ESP_LOGI(TAG, "Read from hello.txt: %s", buf);
 }
+*/
 
 
+void load_font(uint8_t *font_data) {
+    FILE* file = fopen(FONT_FILE, "rb");
+    if (!file) {
+        ESP_LOGE("FONT", "Error al abrir el archivo de fuente");
+        return;
+    }
 
+    fread(font_data, sizeof(font_data), 1, file);
+    fclose(file);
+    ESP_LOGI("FONT", "Fuente cargada correctamente");
+}

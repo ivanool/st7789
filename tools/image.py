@@ -2,11 +2,11 @@ from PIL import Image
 import struct
 
 # Abrir imagen
-img = Image.open('tools/images.jpeg')
+img = Image.open('tools/14.jpg')
 img = img.convert('RGB')
 img = img.resize((240, 135))  
 
-with open('spiffs_image/image2.bin', 'wb') as f:
+with open('spiffs_image/14.bin', 'wb') as f:
     for y in range(img.height):
         for x in range(img.width):
             r, g, b = img.getpixel((x, y))

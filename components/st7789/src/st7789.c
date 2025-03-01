@@ -2,6 +2,14 @@
 
 spi_device_handle_t spi;
 
+/**
+ * @brief Sends a command to the ST7789 display.
+ *
+ * This function sets the display to command mode and transmits an 8-bit command
+ * via SPI to the ST7789 display.
+ *
+ * @param cmd The 8-bit command to be sent to the display.
+ */
 
 void send_cmd(uint8_t cmd) {
     gpio_set_level(TFT_DC, CMD_MODE);
@@ -12,6 +20,16 @@ void send_cmd(uint8_t cmd) {
     ESP_ERROR_CHECK(spi_device_transmit(spi, &t));
 }
 
+/**
+ * @brief Sends data to the ST7789 display via SPI.
+ *
+ * This function sends a block of data to the ST7789 display using the SPI interface.
+ * It sets the data/command pin to data mode, prepares the SPI transaction, and transmits
+ * the data using polling mode.
+ *
+ * @param data Pointer to the data buffer to be sent.
+ * @param size Size of the data buffer in bytes.
+ */
 void send_data(const uint8_t* data, size_t size) {
     spi_transaction_t SPIT;
     gpio_set_level(TFT_DC, DATA_MODE);
@@ -21,6 +39,14 @@ void send_data(const uint8_t* data, size_t size) {
     ESP_ERROR_CHECK(spi_device_polling_transmit(spi, &SPIT));
 }
 
+/**
+ * @brief Sends a 16-bit word to the display.
+ *
+ * This function takes a 16-bit data word, splits it into two 8-bit values,
+ * and sends them to the display using the send_data function.
+ *
+ * @param data The 16-bit data word to be sent.
+ */
 void send_word(uint16_t data){
     uint8_t buffer[2] = {data >> 8, data & 0xFF};
     send_data(buffer, 2);
@@ -28,6 +54,16 @@ void send_word(uint16_t data){
 
 
 
+/**
+ * @brief Initialize GPIO pins for the TFT display.
+ *
+ * This function configures the GPIO pins used for the TFT display's
+ * Data/Command (TFT_DC), Reset (TFT_RST), and Backlight (TFT_BL) signals.
+ * The pins are set to output mode with no pull-up or pull-down resistors,
+ * and interrupts are disabled.
+ *
+ * The specific pins used are defined by the macros TFT_DC, TFT_RST, and TFT_BL.
+ */
 void gpio_init() {
     gpio_config_t io_conf = {
         .pin_bit_mask = (1ULL << TFT_DC) | (1ULL << TFT_RST) | (1ULL << TFT_BL),
@@ -39,6 +75,15 @@ void gpio_init() {
     gpio_config(&io_conf);
 }
 
+/**
+ * @brief Resets the TFT display.
+ *
+ * This function performs a hardware reset on the TFT display by toggling the
+ * reset pin (TFT_RST). It sets the reset pin low, waits for 20 milliseconds,
+ * sets the reset pin high, and then sends the software reset command (SWRESET).
+ * Finally, it waits for 150 milliseconds to allow the display to complete the
+ * reset process.
+ */
 void RESET(){
     gpio_set_level(TFT_RST, 0);
     vTaskDelay(pdMS_TO_TICKS(20));
@@ -47,6 +92,26 @@ void RESET(){
 
     vTaskDelay(pdMS_TO_TICKS(150));
 }
+/**
+ * @brief Configures and sets the backlight duty cycle.
+ *
+ * This function initializes the LEDC timer and channel configurations 
+ * and sets the duty cycle for the backlight. It uses the LEDC (LED 
+ * Controller) peripheral to control the brightness of the backlight.
+ *
+ * @param duty The duty cycle to set for the backlight. This value 
+ *             determines the brightness of the backlight.
+ *
+ * @note The function assumes that the following macros are defined:
+ *       - SPEED_MODE: The speed mode of the LEDC timer.
+ *       - TIMER_NUM: The timer number to use for the LEDC timer.
+ *       - DUTY_RESOLUTION: The resolution of the duty cycle.
+ *       - FREQUENCY_TIMER: The frequency of the LEDC timer.
+ *       - CLK_CFG: The clock configuration for the LEDC timer.
+ *       - LEDC_CHANNEL: The LEDC channel to configure.
+ *       - GPIO_NUM: The GPIO number to use for the LEDC channel.
+ *       - LEDC_HIGH_SPEED_MODE: The high-speed mode for the LEDC.
+ */
 
 void backlight(uint8_t duty) {
 
@@ -75,6 +140,20 @@ void backlight(uint8_t duty) {
 
 }
 
+/**
+ * @brief Configures the porch settings for the ST7789 display.
+ *
+ * This function sends the PORCTRL command to the display and then sends the
+ * porch control data. The porch control data includes the following settings:
+ * - VBP (Vertical Back Porch): 12 (0x0C)
+ * - VFP (Vertical Front Porch): 12 (0x0C)
+ * - PSON (Partial Scan On): 0 (Bit 7)
+ * - HBP (Horizontal Back Porch): 4 (0x04)
+ * - HFP (Horizontal Front Porch): 24 (0x18)
+ *
+ * The porch settings control the timing of the display's vertical and horizontal
+ * blanking intervals.
+ */
 void porch_control() {
     
     send_cmd(PORCTRL);
@@ -88,10 +167,35 @@ void porch_control() {
     send_data(porch_data, sizeof(porch_data));
 }
 
+/**
+ * @brief Sets the orientation of the display.
+ *
+ * This function sends a command to set the orientation of the display
+ * by writing the provided data to the MADCTL register.
+ *
+ * @param data The orientation data to be set. This is typically a value
+ *             that configures the display's rotation and mirroring.
+ */
 void set_orientation(uint8_t data) {
     send_cmd(MADCTL);
     send_data(&data, 1);
 }
+/**
+ * @brief Set the window area for subsequent drawing commands.
+ *
+ * This function sets the rectangular area on the display where the next drawing
+ * commands will take effect. The coordinates are adjusted to ensure they are
+ * within the valid range of the display dimensions.
+ *
+ * @param x0 The starting x-coordinate of the window.
+ * @param x1 The ending x-coordinate of the window.
+ * @param y0 The starting y-coordinate of the window.
+ * @param y1 The ending y-coordinate of the window.
+ *
+ * The coordinates are clamped to the display dimensions defined by TFT_WIDTH
+ * and TFT_HEIGHT. The offsets X_OFFSET and Y_OFFSET are added to the coordinates
+ * before sending the commands to the display.
+ */
 
 void set_window(uint16_t x0, uint16_t x1, uint16_t y0, uint16_t y1) {
     x0 = (x0 >= TFT_WIDTH) ? TFT_WIDTH - 1 : x0;
@@ -108,6 +212,30 @@ void set_window(uint16_t x0, uint16_t x1, uint16_t y0, uint16_t y1) {
     send_word(y1 + Y_OFFSET);
 }
 
+/**
+ * @brief Initializes the ST7789 display controller.
+ *
+ * This function performs the necessary initialization sequence for the ST7789
+ * display controller, including SPI and GPIO initialization, sending commands
+ * to configure the display, and setting the backlight brightness.
+ *
+ * The initialization sequence includes:
+ * - Initializing SPI and GPIO interfaces.
+ * - Resetting the display.
+ * - Exiting sleep mode.
+ * - Setting the color mode.
+ * - Setting the display orientation.
+ * - Configuring porch control.
+ * - Setting the gate control.
+ * - Setting the VCOMS voltage.
+ * - Enabling display inversion.
+ * - Setting the display to normal mode.
+ * - Turning on the display.
+ * - Setting the backlight brightness.
+ *
+ * @note This function uses FreeRTOS delay functions to ensure proper timing
+ *       between commands.
+ */
 void INIT() {
     spi_init();
     gpio_init();
@@ -141,6 +269,19 @@ void INIT() {
     backlight(128); 
 }
 
+/**
+ * @brief Initializes the SPI bus and adds the SPI device.
+ *
+ * This function configures the SPI bus with the specified settings and adds the SPI device to the bus.
+ * It sets up the MOSI, SCLK, and other necessary pins, as well as the maximum transfer size.
+ * The SPI device is configured with a clock speed of 80 MHz, mode 0, and other relevant settings.
+ *
+ * @note This function uses the ESP-IDF SPI driver and checks for errors during initialization.
+ *
+ * @param None
+ *
+ * @return None
+ */
 void spi_init() {
     spi_bus_config_t buscfg = {
         .mosi_io_num = TFT_MOSI,
@@ -165,6 +306,17 @@ void spi_init() {
 
 
 
+/**
+ * @brief Convert RGB888 color format to RGB565 color format.
+ *
+ * This function takes 8-bit red, green, and blue color components (RGB888)
+ * and converts them to a 16-bit RGB565 color format.
+ *
+ * @param r The red component (0-255).
+ * @param g The green component (0-255).
+ * @param b The blue component (0-255).
+ * @return The 16-bit RGB565 color value.
+ */
 uint16_t rgb888_to_rgb565(uint8_t r, uint8_t g, uint8_t b) {
     return ((r >> 3) << 11) | ((g >> 2) << 5) | (b >> 3);
 }
@@ -238,3 +390,109 @@ void draw_rectangle(uint16_t x1, uint16_t y1, uint16_t x2, uint16_t y2, uint16_t
         total_pixels -= current_chunk;
     }
 }
+
+
+/**
+ * @brief Loads an image from a file and displays it on the screen.
+ *
+ * This function reads an image from the specified file path and displays it
+ * on the screen using the ST7789 display driver. The image is expected to be
+ * in a raw format with a width of IMAGE_WIDTH and a height of IMAGE_HEIGHT.
+ *
+ * @param path The file path to the image to be loaded.
+ *
+ * The function performs the following steps:
+ * 1. Opens the file at the specified path in binary read mode.
+ * 2. Allocates a buffer to hold the image data.
+ * 3. Reads the image data from the file into the buffer.
+ * 4. Closes the file.
+ * 5. Iterates over each column of the image, setting the display window and
+ *    sending the image data to the display.
+ * 6. Frees the allocated image buffer.
+ *
+ * Note: Ensure that IMAGE_WIDTH and IMAGE_HEIGHT are defined appropriately
+ *       for the image being loaded.
+ */
+void load_image(const char* path) {
+    FILE* file = fopen(path, "rb");
+    uint16_t* img_buf = malloc(TFT_WIDTH * TFT_HEIGHT * 2);
+    
+    fread(img_buf, 2, TFT_WIDTH * TFT_HEIGHT, file);
+    fclose(file);
+
+    for (int x = 0; x < TFT_WIDTH; x++) {
+        set_window(x, x, 0, TFT_HEIGHT-1);
+        send_cmd(RAMWR);
+        send_color(&img_buf[x * TFT_HEIGHT], TFT_HEIGHT);
+    }
+    
+    free(img_buf);
+}
+
+
+
+
+/**
+ * @brief Draws a character on the display at the specified coordinates with the given color and scale.
+ *
+ * This function renders a character from the font data onto the display. The character is scaled
+ * by the specified factor, allowing for larger or smaller text rendering.
+ *
+ * @param x The x-coordinate of the top-left corner where the character will be drawn.
+ * @param y The y-coordinate of the top-left corner where the character will be drawn.
+ * @param c The character to be drawn. If the character is outside the font range, the function returns without drawing.
+ * @param color The color of the character in the display's color format.
+ * @param scale The scaling factor for the character. A scale of 1 means no scaling, while higher values increase the size of the character.
+ */
+
+void draw_char(uint16_t x, uint16_t y, char c, uint16_t color, uint8_t scale, uint8_t *font_data) {
+    if (c < FONT_START || c > FONT_END) return; 
+
+    uint8_t *glyph = &font_data[(c - FONT_START) * FONT_HEIGHT]; 
+
+    for (int row = 0; row < FONT_HEIGHT; row++) {
+        uint8_t line = glyph[row]; 
+
+        for (int col = 0; col < FONT_WIDTH; col++) {
+            if (line & (1 << (7 - col))) { 
+                for (int i = 0; i < scale; i++) {
+                    for (int j = 0; j < scale; j++) {
+                        draw_pixel(x + col * scale + i, y + row * scale + j, color);
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+/**
+ * @brief Draws a text string on the display at the specified coordinates.
+ *
+ * This function iterates through each character in the provided text string
+ * and draws it on the display at the specified (x, y) coordinates. If a newline
+ * character ('\n') is encountered, the cursor moves to the beginning of the next
+ * line, with vertical spacing determined by the font height and scale.
+ *
+ * @param x The x-coordinate where the text drawing starts.
+ * @param y The y-coordinate where the text drawing starts.
+ * @param text The null-terminated string to be drawn.
+ * @param color The color of the text.
+ * @param scale The scale factor for the text size.
+ */
+void draw_text(uint16_t x, uint16_t y, const char *text, uint16_t color, uint8_t scale, uint8_t *font_data) {
+    uint16_t cursor_x = x;
+
+    while (*text) {
+        if (*text == '\n') {
+            y += (FONT_HEIGHT + 2) * scale;
+            cursor_x = x;
+        } else {
+            draw_char(cursor_x, y, *text, color, scale, font_data);
+            cursor_x += FONT_WIDTH * scale;
+        }
+        text++;
+    }
+}
+

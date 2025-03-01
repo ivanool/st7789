@@ -1,7 +1,7 @@
 {
     "version":            "1.1",
     "project_name":       "TOHA",
-    "project_version":    "13b0cda-dirty",
+    "project_version":    "08dac12-dirty",
     "project_path":       "/home/ivanool/Escritorio/KANA/TOHA",
     "idf_path":           "/home/ivanool/esp/esp-idf",
     "build_dir":          "/home/ivanool/Escritorio/KANA/TOHA/build",

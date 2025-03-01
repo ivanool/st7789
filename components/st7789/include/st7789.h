@@ -65,6 +65,15 @@
 #define GPIO_NUM TFT_BL
 
 
+#define FONT_WIDTH  8    
+#define FONT_HEIGHT 12   
+#define FONT_START  0x20 
+#define FONT_END    0x7F 
+
+
+#define FONT_FILE   "/spiffs/font.bin"  
+
+
 void RESET();
 void spi_init();
 void send_data(const uint8_t* data, size_t size);
@@ -78,3 +87,6 @@ uint16_t rgb888_to_rgb565(uint8_t r, uint8_t g, uint8_t b);
 void draw_pixel(uint16_t x, uint16_t y, uint16_t color);
 void draw_rectangle(uint16_t x1, uint16_t y1, uint16_t x2, uint16_t y2, uint16_t color);
 void send_color(uint16_t * color, uint16_t size);
+void load_image(const char* path);
+void draw_char(uint16_t x, uint16_t y, char c, uint16_t color, uint8_t scale, uint8_t *font_data);
+void draw_text(uint16_t x, uint16_t y, const char *text, uint16_t color, uint8_t scale, uint8_t *font_data);

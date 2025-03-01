@@ -1,6 +1,6 @@
 # Nombre     Tipo   Subtipo     Offset   Tamaño
 nvs,          data,  nvs,       0x9000,  0x5000
 otadata,      data,  ota,       0xe000,  0x2000
-app0,         app,   ota_0,     0x10000, 0x1A0000
-app1,         app,   ota_1,     0x1B0000, 0x1A0000
-storage, data,  spiffs,    0x350000, 0xB0000
+app0,         app,   ota_0,     0x10000, 0x160000
+app1,         app,   ota_1,     0x170000, 0x160000
+storage,      data,  spiffs,    0x2D0000, 0x140000  
