@@ -4,17 +4,6 @@ A high-performance SPI driver for the ST7789 LCD controller on the TTGO T-Displa
 
 ![TTGO T-Display](https://m.media-amazon.com/images/I/51sRifUrKhL.jpg)
 
-## Table of Contents
-- [Features](#features)
-- [Hardware Requirements](#hardware-requirements)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Configuration](#configuration)
-- [Troubleshooting](#troubleshooting)
-- [Credits](#credits)
-- [License](#license)
-
----
 
 ## Features
 - **Display Initialization**: Full setup sequence for ST7789.
