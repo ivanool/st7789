@@ -1,6 +1,0 @@
-[0/1] Re-running CMake...
--- Building ESP-IDF components for target esp32
--- Configuring incomplete, errors occurred!
-See also "/home/ivanool/Escritorio/KANA/TOHA/build/CMakeFiles/CMakeOutput.log".
-FAILED: build.ninja 
-/usr/bin/cmake --regenerate-during-build -S/home/ivanool/Escritorio/KANA/TOHA -B/home/ivanool/Escritorio/KANA/TOHA/build
