@@ -2,7 +2,7 @@
 
 A high-performance SPI driver for the ST7789 LCD controller on the TTGO T-Display (ESP32). This driver provides essential functions to control the display, draw graphics, render text, and manage the backlight.
 
-![TTGO T-Display](https://i.imgur.com/example_image.png)
+![TTGO T-Display](https://m.media-amazon.com/images/I/51sRifUrKhL.jpg)
 
 ## Table of Contents
 - [Features](#features)
