@@ -4,6 +4,20 @@
 static const char* TAG = "ixora";
 
 
+/**
+ * @brief Mounts the SPIFFS filesystem.
+ *
+ * This function configures and mounts the SPIFFS (SPI Flash File System) 
+ * filesystem. If the filesystem cannot be mounted, it attempts to format 
+ * it if the `format_if_mount_failed` option is set to true.
+ *
+ * The function logs appropriate error messages if the filesystem cannot 
+ * be mounted or formatted, or if the SPIFFS partition cannot be found.
+ * It also logs the total and used size of the SPIFFS partition upon 
+ * successful mounting.
+ *
+ * @note This function uses the ESP-IDF SPIFFS API.
+ */
 void mount_spiffs(void) {
     esp_vfs_spiffs_conf_t conf = {
         .base_path = "/spiffs",
@@ -34,37 +48,28 @@ void mount_spiffs(void) {
     }
 }
 
-/*
-void read_hello_txt(void)
-{
-    ESP_LOGI(TAG, "Reading hello.txt");
-
-    // Open for reading hello.txt
-    FILE* f = fopen("/spiffs/h.txt", "r");
-    if (f == NULL) {
-        ESP_LOGE(TAG, "Failed to open hello.txt");
-        return;
-    }
-
-    char buf[64];
-    memset(buf, 0, sizeof(buf));
-    fread(buf, 1, sizeof(buf), f);
-    fclose(f);
-
-    // Display the read contents from the file
-    ESP_LOGI(TAG, "Read from hello.txt: %s", buf);
-}
-*/
-
-
+/**
+ * @brief Loads font data from a file into the provided buffer.
+ *
+ * This function opens the font file specified by FONT_FILE in binary read mode,
+ * reads the font data into the provided buffer, and then closes the file.
+ * 
+ * @param font_data Pointer to the buffer where the font data will be loaded.
+ *
+ * @note The buffer size should be at least (FONT_END - FONT_START + 1) * FONT_HEIGHT bytes.
+ * 
+ * @warning If the file cannot be opened, an error message will be logged.
+ * 
+ * @return void
+ */
 void load_font(uint8_t *font_data) {
     FILE* file = fopen(FONT_FILE, "rb");
     if (!file) {
         ESP_LOGE("FONT", "Error al abrir el archivo de fuente");
-        return;
     }
 
-    fread(font_data, sizeof(font_data), 1, file);
+    fread(font_data, sizeof(uint8_t), (FONT_END - FONT_START + 1) * FONT_HEIGHT, file);  
     fclose(file);
+
     ESP_LOGI("FONT", "Fuente cargada correctamente");
 }

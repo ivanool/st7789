@@ -16,7 +16,6 @@ void app_main() {
     uint8_t font_data[(FONT_END - FONT_START) * FONT_HEIGHT]; 
     mount_spiffs();  
     load_font(font_data);     
-
     INIT();  
     while (1)
     {
@@ -47,7 +46,7 @@ void app_main() {
         load_image("/spiffs/13.bin");
         vTaskDelay(pdMS_TO_TICKS(1));
         load_image("/spiffs/14.bin");
-
+        draw_text_scaled(10, 10, "puto", rgb888_to_rgb565(255, 255, 255),1, font_data);
     }
 
 }

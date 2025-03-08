@@ -430,25 +430,26 @@ void load_image(const char* path) {
 }
 
 
-
-
 /**
- * @brief Draws a character on the display at the specified coordinates with the given color and scale.
+ * @brief Draws a scaled character on the display.
  *
- * This function renders a character from the font data onto the display. The character is scaled
- * by the specified factor, allowing for larger or smaller text rendering.
+ * This function draws a character at the specified coordinates with the given
+ * color and scale factor. The character is drawn using a font array.
  *
- * @param x The x-coordinate of the top-left corner where the character will be drawn.
- * @param y The y-coordinate of the top-left corner where the character will be drawn.
- * @param c The character to be drawn. If the character is outside the font range, the function returns without drawing.
- * @param color The color of the character in the display's color format.
- * @param scale The scaling factor for the character. A scale of 1 means no scaling, while higher values increase the size of the character.
+ * @param x The x-coordinate where the character will be drawn.
+ * @param y The y-coordinate where the character will be drawn.
+ * @param c The character to be drawn.
+ * @param color The color of the character.
+ * @param scale The scale factor for the character size.
+ * @param font A pointer to the font array.
+ *
+ * @note The function does nothing if the character is outside the font range.
  */
 
-void draw_char(uint16_t x, uint16_t y, char c, uint16_t color, uint8_t scale, uint8_t *font_data) {
+void draw_char_scaled(uint16_t x, uint16_t y, char c, uint16_t color, uint8_t scale, uint8_t *font) {
     if (c < FONT_START || c > FONT_END) return; 
 
-    uint8_t *glyph = &font_data[(c - FONT_START) * FONT_HEIGHT]; 
+    uint8_t *glyph = &font[(c - FONT_START) * FONT_HEIGHT]; 
 
     for (int row = 0; row < FONT_HEIGHT; row++) {
         uint8_t line = glyph[row]; 
@@ -466,22 +467,22 @@ void draw_char(uint16_t x, uint16_t y, char c, uint16_t color, uint8_t scale, ui
 }
 
 
-
 /**
- * @brief Draws a text string on the display at the specified coordinates.
+ * @brief Draws scaled text on the display.
  *
- * This function iterates through each character in the provided text string
- * and draws it on the display at the specified (x, y) coordinates. If a newline
- * character ('\n') is encountered, the cursor moves to the beginning of the next
- * line, with vertical spacing determined by the font height and scale.
+ * This function draws a string of text on the display at the specified
+ * coordinates, with the specified color and scale. The text is drawn
+ * using the provided font data.
  *
- * @param x The x-coordinate where the text drawing starts.
- * @param y The y-coordinate where the text drawing starts.
- * @param text The null-terminated string to be drawn.
+ * @param x The x-coordinate where the text should start.
+ * @param y The y-coordinate where the text should start.
+ * @param text The string of text to be drawn.
  * @param color The color of the text.
  * @param scale The scale factor for the text size.
+ * @param font_data Pointer to the font data used for rendering the text.
  */
-void draw_text(uint16_t x, uint16_t y, const char *text, uint16_t color, uint8_t scale, uint8_t *font_data) {
+void draw_text_scaled(uint16_t x, uint16_t y, const char *text, uint16_t color, uint8_t scale, uint8_t *font_data) {
+    
     uint16_t cursor_x = x;
 
     while (*text) {
@@ -489,10 +490,9 @@ void draw_text(uint16_t x, uint16_t y, const char *text, uint16_t color, uint8_t
             y += (FONT_HEIGHT + 2) * scale;
             cursor_x = x;
         } else {
-            draw_char(cursor_x, y, *text, color, scale, font_data);
+            draw_char_scaled(cursor_x, y, *text, color, scale, font_data);
             cursor_x += FONT_WIDTH * scale;
         }
         text++;
     }
 }
-
