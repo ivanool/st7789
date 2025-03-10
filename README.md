@@ -19,3 +19,7 @@ A high-performance SPI driver for the ST7789 LCD controller on the TTGO T-Displa
 - TTGO T-Display board (ESP32 with integrated ST7789 display).
 - ESP-IDF development environment (v4.4+ recommended).
 - SPIFFS configured for font storage.
+
+bitcoin wallet
+
+bc1q509vlzjrptxcwuv0ah9dpmvrd8cgmack8ns9u5
