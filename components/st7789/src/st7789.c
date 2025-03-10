@@ -1,6 +1,7 @@
 #include "st7789.h"
 
 spi_device_handle_t spi;
+static uint16_t frame_buffer[TFT_WIDTH * TFT_HEIGHT];
 
 /**
  * @brief Sends a command to the ST7789 display.
@@ -322,23 +323,49 @@ uint16_t rgb888_to_rgb565(uint8_t r, uint8_t g, uint8_t b) {
 }
 
 
+
 /**
- * @brief Sends an array of colors to the display.
+ * @brief Sends a buffer of color data to the display.
  *
- * This function takes an array of 16-bit color values and converts them into
- * an array of bytes, which are then sent to the display using the send_data function.
+ * This function takes an array of 16-bit color values and sends them to the display
+ * in chunks. Each color value is split into two bytes and stored in a temporary buffer
+ * before being sent.
  *
  * @param color Pointer to an array of 16-bit color values.
- * @param size The number of color values in the array.
+ * @param size Number of color values in the array.
  */
-void send_color(uint16_t * color, uint16_t size){
-    static uint8_t byte[1024];
-    int index = 0;
-    for(int i = 0; i < size; i++){
-        byte[index++] = (color[i]>>8) & 0xFF;
-        byte[index++] = color[i]&0xFF;
+void send_color(uint16_t *color, uint16_t size) {
+    static uint8_t byte_buffer[1024]; 
+    const uint16_t chunk_size = 512;
+    uint16_t sent = 0;
+
+    while (sent < size) {
+        uint16_t remaining = size - sent;
+        uint16_t current_chunk = (remaining > chunk_size) ? chunk_size : remaining;
+        uint16_t index = 0;
+
+        for (uint16_t i = 0; i < current_chunk; i++) {
+            uint16_t c = color[sent + i];
+            byte_buffer[index++] = (c >> 8) & 0xFF;
+            byte_buffer[index++] = c & 0xFF;
+        }
+
+        send_data(byte_buffer, current_chunk * 2);
+        sent += current_chunk;
     }
-    send_data(byte, size*2);
+}
+
+/**
+ * @brief Clears the frame buffer by filling it with the specified color.
+ *
+ * This function iterates over the entire frame buffer and sets each pixel to the given color.
+ *
+ * @param color The color to fill the frame buffer with. The color is represented as a 16-bit value.
+ */
+void clear_frame_buffer(uint16_t color) {
+    for (uint32_t i = 0; i < TFT_WIDTH * TFT_HEIGHT; i++) {
+        frame_buffer[i] = color;
+    }
 }
 
 /**
@@ -351,10 +378,9 @@ void send_color(uint16_t * color, uint16_t size){
  * @param y The y-coordinate of the pixel.
  * @param color The color of the pixel in 16-bit format.
  */
-void draw_pixel(uint16_t x, uint16_t y, uint16_t color){
-    set_window(x, x, y, y);
-    send_cmd(RAMWR);
-    send_color(&color, 1);
+void draw_pixel(uint16_t x, uint16_t y, uint16_t color) {
+    if (x >= TFT_WIDTH || y >= TFT_HEIGHT) return;
+    frame_buffer[y * TFT_WIDTH + x] = color;
 }
 
 
@@ -370,25 +396,32 @@ void draw_pixel(uint16_t x, uint16_t y, uint16_t color){
  * @param color The color to fill the rectangle with.
  */
 void draw_rectangle(uint16_t x1, uint16_t y1, uint16_t x2, uint16_t y2, uint16_t color) {
-    set_window(x1, x2, y1, y2);
+
+    x1 = (x1 < TFT_WIDTH) ? x1 : TFT_WIDTH - 1;
+    x2 = (x2 < TFT_WIDTH) ? x2 : TFT_WIDTH - 1;
+    y1 = (y1 < TFT_HEIGHT) ? y1 : TFT_HEIGHT - 1;
+    y2 = (y2 < TFT_HEIGHT) ? y2 : TFT_HEIGHT - 1;
+
+    if (x1 > x2) { uint16_t t = x1; x1 = x2; x2 = t; }
+    if (y1 > y2) { uint16_t t = y1; y1 = y2; y2 = t; }
+
+    for (uint16_t y = y1; y <= y2; y++) {
+        for (uint16_t x = x1; x <= x2; x++) {
+            frame_buffer[y * TFT_WIDTH + x] = color;
+        }
+    }
+}
+
+/**
+ * @brief Flushes the entire frame buffer to the display.
+ *
+ * This function sets the window to cover the entire display area and sends the
+ * frame buffer content to the display using the RAMWR command.
+ */
+void flush_frame_buffer() {
+    set_window(0, TFT_WIDTH - 1, 0, TFT_HEIGHT - 1);
     send_cmd(RAMWR);
-
-    uint16_t width = x2 - x1 + 1;
-    uint16_t height = y2 - y1 + 1;
-    uint32_t total_pixels = width * height;
-
-    uint16_t color_buffer[512];
-    const uint16_t chunk_size = sizeof(color_buffer)/sizeof(uint16_t);
-
-    for (int i = 0; i < chunk_size; i++) {
-        color_buffer[i] = color;
-    }
-
-    while (total_pixels > 0) {
-        uint16_t current_chunk = (total_pixels > chunk_size) ? chunk_size : total_pixels;
-        send_color(color_buffer, current_chunk);
-        total_pixels -= current_chunk;
-    }
+    send_color(frame_buffer, TFT_WIDTH * TFT_HEIGHT);
 }
 
 

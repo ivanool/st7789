@@ -88,5 +88,7 @@ void draw_pixel(uint16_t x, uint16_t y, uint16_t color);
 void draw_rectangle(uint16_t x1, uint16_t y1, uint16_t x2, uint16_t y2, uint16_t color);
 void send_color(uint16_t * color, uint16_t size);
 void load_image(const char* path);
+void flush_frame_buffer();
+void clear_frame_buffer(uint16_t color);
 void draw_char_scaled(uint16_t x, uint16_t y, char c, uint16_t color, uint8_t scale, uint8_t *font);
 void draw_text_scaled(uint16_t x, uint16_t y, const char *text, uint16_t color, uint8_t scale, uint8_t *font_data);
